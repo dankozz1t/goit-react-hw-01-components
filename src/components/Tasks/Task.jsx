@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import s from './Task.module.css';
 
 const Task = ({ title, children }) => {
@@ -8,6 +9,10 @@ const Task = ({ title, children }) => {
       {children}
     </li>
   );
+};
+
+Task.propTypes = {
+  title: PropTypes.string,
 };
 
 export default Task;
