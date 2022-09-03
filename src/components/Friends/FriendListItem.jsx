@@ -1,13 +1,16 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
+import s from './FriendListItem.module.css';
+
 const FriendListItem = ({ avatar, name, isOnline }) => {
+  const colorStatus = isOnline ? 'green' : 'red';
   return (
-    <Fragment>
-      <span></span>
-      <img src={avatar} alt="User avatar" width="48" />
-      <p>{name}</p>
-    </Fragment>
+    <li className={s.item}>
+      <span className={`${s.status} ${s[colorStatus]}`}></span>
+      <img className={s.avatar} src={avatar} alt="User avatar" width="48" />
+      <p className={s.name}>{name}</p>
+    </li>
   );
 };
 
