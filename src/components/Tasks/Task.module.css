@@ -1,0 +1,12 @@
+.item {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: wheat;
+  border: 2px solid tomato;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
