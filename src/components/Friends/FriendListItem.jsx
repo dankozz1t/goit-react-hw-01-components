@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import s from './FriendListItem.module.css';
+import { Fragment } from 'react';
 
 const FriendListItem = ({ avatar, name, isOnline }) => {
   const colorStatus = isOnline ? 'green' : 'red';

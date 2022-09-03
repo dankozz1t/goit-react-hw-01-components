@@ -9,9 +9,12 @@ const FriendList = ({ friends }) => {
     <ul className={s.list}>
       {friends.map(({ avatar, name, isOnline, id }) => {
         return (
-          <li key={id}>
-            <FriendListItem avatar={avatar} name={name} isOnline={isOnline} />
-          </li>
+          <FriendListItem
+            avatar={avatar}
+            name={name}
+            isOnline={isOnline}
+            key={id}
+          />
         );
       })}
     </ul>
