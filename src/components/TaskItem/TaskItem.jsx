@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import s from './Task.module.css';
+import s from './TaskItem.module.css';
 
-const Task = ({ title, children }) => {
+const TaskItem = ({ title, children }) => {
   return (
     <li className={s.item}>
       <h2 className={s.title}>{title}</h2>
@@ -11,8 +11,8 @@ const Task = ({ title, children }) => {
   );
 };
 
-Task.propTypes = {
+TaskItem.propTypes = {
   title: PropTypes.string,
 };
 
-export default Task;
+export default TaskItem;

@@ -1,14 +1,14 @@
 import Container from './Container/Container';
-import TaskList from './Tasks/TaskList';
+import TaskList from './TaskList/TaskList';
 
 import Profile from './Profile/Profile';
-import Task from './Tasks/Task';
+import TaskItem from './TaskItem/TaskItem';
 import user from '../data/user.json';
 
 import Statistics from './Statistics/Statistics';
 import data from '../data/data.json';
 
-import FriendList from './Friends/FriendList';
+import FriendList from './FriendList/FriendList';
 import friends from '../data/friends.json';
 
 import TransactionHistory from './TransactionHistory/TransactionHistory';
@@ -19,7 +19,7 @@ export const App = () => {
     <div>
       <Container>
         <TaskList>
-          <Task title="Task 1">
+          <TaskItem title="Task 1">
             <Profile
               username={user.username}
               tag={user.tag}
@@ -27,20 +27,20 @@ export const App = () => {
               avatar={user.avatar}
               stats={user.stats}
             />
-          </Task>
+          </TaskItem>
 
-          <Task title="Task 2">
+          <TaskItem title="Task 2">
             <Statistics title="Upload stats" stats={data} />
             <Statistics stats={data} />
-          </Task>
+          </TaskItem>
 
-          <Task title="Task 3">
+          <TaskItem title="Task 3">
             <FriendList friends={friends} />
-          </Task>
+          </TaskItem>
 
-          <Task title="Task 4">
+          <TaskItem title="Task 4">
             <TransactionHistory items={transactions} />
-          </Task>
+          </TaskItem>
         </TaskList>
       </Container>
     </div>
